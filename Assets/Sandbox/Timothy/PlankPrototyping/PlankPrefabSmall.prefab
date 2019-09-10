@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plankState: 0
+  plankSize: {fileID: 11400000, guid: dab67a2d187774d4fbac2edbeb98dcd3, type: 2}
 --- !u!1 &2847502681954853032
 GameObject:
   m_ObjectHideFlags: 0
