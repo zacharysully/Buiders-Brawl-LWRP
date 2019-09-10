@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plankState: 0
+  _currentBoardsOut: {fileID: 11400000, guid: ba963e75cd1c9a5439572520015057d7, type: 2}
 --- !u!1 &9000782387457301968
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,17 +10,39 @@ public class PlankPile : MonoBehaviour
 
     //gives plank to player
 
-    public GameObject[] plankPrefab; 
+    public GameObject[] plankPrefab;
+
+    [Header("Limited Number of Boards Variables")]
+    [SerializeField]
+    FloatVariable _amountOfBoardsAllowed;
+    [SerializeField]
+    FloatVariable _usedPlanks;
+
+    public FloatVariable UsedPlanks { get => _usedPlanks; set => _usedPlanks = value; }
+
+    private void Start()
+    {
+        _usedPlanks.Value = 0;
+    }
 
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
-        GameObject newlyBirthedPlank;
+        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
+        {
+            return null;
+        }
+        else
+        {
+            GameObject newlyBirthedPlank;
 
-        newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
+            newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
 
-        newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
+            newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
 
-        return newlyBirthedPlank;
+            _usedPlanks.Value++;
+
+            return newlyBirthedPlank;
+        }
     }
 
 }

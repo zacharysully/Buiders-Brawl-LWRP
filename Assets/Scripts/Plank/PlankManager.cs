@@ -24,6 +24,9 @@ public class PlankManager : MonoBehaviour
 
     public PlankState plankState;
 
+    [SerializeField]
+    FloatVariable _currentBoardsOut;
+
     private SnapTest2 snapRef;
 
     private PlayerController playerWhoPlacedMe;
@@ -338,6 +341,8 @@ public class PlankManager : MonoBehaviour
         if (playerWhoPlacedMe != null)
         {
             playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace();
+
+            _currentBoardsOut.Value--;
             //show
             GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, GameManager.S.player1.GetComponent<Points>().pointsForBoardPlace);
             /*playerWhoPlacedMe.GetComponent<FlashyPoints>().ShowPointsGained(playerWhoPlacedMe.transform.position,
