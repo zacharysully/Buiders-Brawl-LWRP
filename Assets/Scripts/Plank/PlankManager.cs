@@ -24,6 +24,8 @@ public class PlankManager : MonoBehaviour
 
     public PlankState plankState;
 
+    public PlankBase plankSize;
+
     private SnapTest2 snapRef;
 
     private PlayerController playerWhoPlacedMe;
