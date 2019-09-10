@@ -39,6 +39,10 @@ public class PlankManager : MonoBehaviour
 
     private bool earlyPlank = true;
 
+    float _despawnTimer = 20;
+    [SerializeField]
+    float _startTime;
+
     //------------------------------------------------------------------------------------------------------
 
     private void Start()
@@ -56,6 +60,20 @@ public class PlankManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         earlyPlank = false;
+    }
+
+    IEnumerator DespawnTimer()
+    {
+        yield return new WaitForSeconds(_despawnTimer);
+
+        float _currentTime = Time.time - _startTime;
+
+        Debug.Log(_currentTime);
+        if(_currentTime >= _despawnTimer - 1)
+        {
+            _currentBoardsOut.Value--;
+            Destroy(gameObject);
+        }
     }
 
     public void PickUpSpawn()
@@ -146,6 +164,8 @@ public class PlankManager : MonoBehaviour
 
         //animation
         StartCoroutine(plankAnim.PutDownPlankAnim());
+
+        _startTime = Time.time;
     }
 
     public void PlacingPlank()
@@ -250,9 +270,7 @@ public class PlankManager : MonoBehaviour
 
         SetToHitPlayers();
 
-
-
-
+        StartCoroutine(DespawnTimer());
         //StartCoroutine(DropDelaySetToHitPlayers());
 
         /*
