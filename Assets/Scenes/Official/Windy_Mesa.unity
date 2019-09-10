@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2406,6 +2406,24 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 293978783875689246, guid: 556616bc76315f144a1ad0f093de84e6,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 8506176725659754171, guid: 5bb653664c083804f99694f0f7d6d617,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 2320350414238029631, guid: ae9c5d6cead562b4c8a52000b9e7f26c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfda62fd8c3d1b449a43c09b1ff24bc6, type: 3}
 --- !u!4 &170775525 stripped
@@ -8119,6 +8137,36 @@ PrefabInstance:
       objectReference: {fileID: 693492521}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90fecd509f8421045a7e40a875876d99, type: 3}
+--- !u!1 &666166916
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1054453237}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 666166917}
+  m_Layer: 0
+  m_Name: Goal (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &666166917
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1054453237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666166916}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1439567426}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &674292871
 GameObject:
   m_ObjectHideFlags: 0

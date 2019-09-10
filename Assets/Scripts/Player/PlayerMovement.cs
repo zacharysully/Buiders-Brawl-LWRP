@@ -119,8 +119,10 @@ public class PlayerMovement : MonoBehaviour
             plankManagerRef = this.gameObject.GetComponentInChildren<PlankManager>();
             float adjustedPlayerSpeed = plankManagerRef.plankSize.PlayerMovementSpeed;
             //and add small amount of input direction
-            playerFinalDirection = (direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage);
-            reversePlayerMovementFromJoysticks = ((direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;
+             playerFinalDirection = (direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage);
+             reversePlayerMovementFromJoysticks = ((direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;
+            /*playerFinalDirection = (direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage);
+            reversePlayerMovementFromJoysticks = ((direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;*/
         }
         else
         {

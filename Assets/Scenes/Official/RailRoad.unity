@@ -7145,7 +7145,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -4.7719103e-25, z: 6.56e-43, w: -5.6204407e-25}
+  m_BoundingSphereOverride: {x: 0, y: 5.130337e-12, z: 7.38e-43, w: 4.3236872e-12}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 90
@@ -7665,6 +7665,24 @@ PrefabInstance:
       propertyPath: plankPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 293978783875689246, guid: 556616bc76315f144a1ad0f093de84e6,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 8506176725659754171, guid: 5bb653664c083804f99694f0f7d6d617,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 2320350414238029631, guid: ae9c5d6cead562b4c8a52000b9e7f26c,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 200439474, guid: bfda62fd8c3d1b449a43c09b1ff24bc6, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bfda62fd8c3d1b449a43c09b1ff24bc6, type: 3}
@@ -7860,8 +7878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077fa46bb278ebf44839aceb89ada539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riverDirection: 2
-  riverSpeed: 50
 --- !u!65 &209179237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8241,8 +8257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077fa46bb278ebf44839aceb89ada539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  riverDirection: 2
-  riverSpeed: 50
 --- !u!1 &234995387
 GameObject:
   m_ObjectHideFlags: 0
@@ -47694,17 +47708,17 @@ PrefabInstance:
       propertyPath: inputType
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4847274759241547813, guid: e47230838d2df6145bf584f5f0377f22,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4154333681177768567, guid: e47230838d2df6145bf584f5f0377f22,
         type: 3}
       propertyPath: faces.Array.data[2]
       value: 
       objectReference: {fileID: 21300000, guid: 1fd7a337301142045aabe5eb9c7ee88e,
         type: 3}
+    - target: {fileID: 4847274759241547813, guid: e47230838d2df6145bf584f5f0377f22,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7015113644589637751, guid: e47230838d2df6145bf584f5f0377f22,
         type: 3}
       propertyPath: m_IsActive
@@ -50271,6 +50285,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 26c143110003b77409c3e7f44dcc38f9, type: 3}
+--- !u!1 &1927716156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1881460428}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927716157}
+  m_Layer: 0
+  m_Name: Goal (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1927716157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 1881460428}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927716156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 878245024}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932385570 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 26c143110003b77409c3e7f44dcc38f9,

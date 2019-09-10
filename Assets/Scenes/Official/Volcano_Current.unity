@@ -1176,15 +1176,15 @@ PrefabInstance:
       propertyPath: inputType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 925820139, guid: a976d66702bbc334d9a158045b06242f, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 690462585}
     - target: {fileID: 6420598283353192616, guid: a976d66702bbc334d9a158045b06242f,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 925820139, guid: a976d66702bbc334d9a158045b06242f, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 690462585}
     m_RemovedComponents:
     - {fileID: 1103175363587522359, guid: a976d66702bbc334d9a158045b06242f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a976d66702bbc334d9a158045b06242f, type: 3}
@@ -1420,6 +1420,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1490,10 +1495,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.70001
       objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+    - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (1)
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6847474690571200435, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -1539,11 +1544,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b35edbb5df456a4e95c1c4ea2886518, type: 3}
@@ -2165,6 +2165,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2234,11 +2239,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (3)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -2623,6 +2623,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2693,11 +2698,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.700005
       objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_Enabled
@@ -2718,6 +2718,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2787,11 +2792,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (7)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -4102,6 +4102,24 @@ PrefabInstance:
       propertyPath: m_Center.x
       value: -0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[0]
+      value: 
+      objectReference: {fileID: 293978783875689246, guid: 556616bc76315f144a1ad0f093de84e6,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 8506176725659754171, guid: 5bb653664c083804f99694f0f7d6d617,
+        type: 3}
+    - target: {fileID: 2539823770785944545, guid: bfda62fd8c3d1b449a43c09b1ff24bc6,
+        type: 3}
+      propertyPath: plankPrefab.Array.data[2]
+      value: 
+      objectReference: {fileID: 2320350414238029631, guid: ae9c5d6cead562b4c8a52000b9e7f26c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfda62fd8c3d1b449a43c09b1ff24bc6, type: 3}
 --- !u!1 &379275131
@@ -6758,6 +6776,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6828,10 +6851,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.70001
       objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+    - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (10)
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6847474690571200435, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -6877,11 +6900,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b35edbb5df456a4e95c1c4ea2886518, type: 3}
@@ -10993,6 +11011,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11062,11 +11085,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (6)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -12105,6 +12123,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12174,11 +12197,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.70001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (2)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -12362,6 +12380,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12431,11 +12454,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (8)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -18282,6 +18300,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18351,11 +18374,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (5)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -20668,6 +20686,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458497239}
     m_Modifications:
+    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
+        type: 3}
+      propertyPath: m_Name
+      value: EnviroPlankPrefab (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 5440200582224156455, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20737,11 +20760,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7761090531474180682, guid: 8b35edbb5df456a4e95c1c4ea2886518,
-        type: 3}
-      propertyPath: m_Name
-      value: EnviroPlankPrefab (4)
       objectReference: {fileID: 0}
     - target: {fileID: 648114102108414453, guid: 8b35edbb5df456a4e95c1c4ea2886518,
         type: 3}
@@ -21793,6 +21811,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1971517364}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1971552462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 59149879}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1971552463}
+  m_Layer: 0
+  m_Name: Goal (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1971552463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 59149879}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971552462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1646045519}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1984144901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7385802442016330996, guid: 07cc65d3bf5532348ac10626ec110c55,
