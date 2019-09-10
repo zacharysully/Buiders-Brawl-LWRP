@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public List<PlayerController> playerList;
 
     public List<PlankManager> planksInScene;
-
+    public MasterCameraController camController;
     public GameObject winner;
     [HideInInspector]
     public bool someoneWon = false;
@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        camController.Initialize();
 
         //created planks add themseleves to this
         planksInScene = new List<PlankManager>();

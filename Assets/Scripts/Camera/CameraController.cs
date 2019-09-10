@@ -327,10 +327,12 @@ public class CameraController : MonoBehaviour
         if (isStart)
         {
             //disable the players from moving
+            /*
             GameManager.S.player1.GetComponent<PlayerController>().enabled = false;
             GameManager.S.player2.GetComponent<PlayerController>().enabled = false;
             GameManager.S.player3.GetComponent<PlayerController>().enabled = false;
             GameManager.S.player4.GetComponent<PlayerController>().enabled = false;
+            */
 
             if (!isRightToLeft)
             {
