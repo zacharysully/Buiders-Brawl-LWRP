@@ -28,15 +28,17 @@ public class LevelCameraController : VirtualCameraControllerBase
     void Update()
     {
         FindMidpoint();
-        midpointT.transform.position = midpoint;
+        //midpointT.transform.position = midpoint;
+        midpointT.transform.position = Vector3.Lerp(midpointT.transform.position, midpoint, 0.015f);
         followObject.position = new Vector3(midpointT.position.x + followXOffset, FindHeight(), midpointT.position.z);
+        //followObject.position = Vector3.Lerp(followObject.position, new Vector3(midpointT.position.x + followXOffset, FindHeight(), midpointT.position.z), .05f);
     }
 
     float FindHeight()
     {
         pitchPercent = (furthestDistance - cameraPlayerDistanceFloor) / (cameraPlayerDistanceCeiling - cameraPlayerDistanceFloor);
         height = Mathf.Lerp(cameraYHeightFloor + midpointT.position.y, cameraYHeightCeiling + midpointT.position.y, pitchPercent);
-        Debug.Log(height);
+        //dDebug.Log(height);
         //apply
         //height
         //cameraHeightSetter = cameraRef.transform.position;
