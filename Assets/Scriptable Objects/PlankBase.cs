@@ -16,4 +16,16 @@ public class PlankBase : ScriptableObject
             return playerMovementSpeed;
         }
     }
+
+    [Tooltip("The amount of points earned for placing this plank type")]
+    [SerializeField]
+    private int pointsForPlace;
+
+    public int PointsForPlace
+    {
+        get
+        {
+            return pointsForPlace;
+        }
+    }
 }

@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: PlankMedium
   m_EditorClassIdentifier: 
   playerMovementSpeed: 2.75
+  pointsForPlace: 10

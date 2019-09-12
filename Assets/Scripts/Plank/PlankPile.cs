@@ -10,48 +10,39 @@ public class PlankPile : MonoBehaviour
 
     //gives plank to player
     [SerializeField]
-    private GameObject[] plankPrefab;
-    [Tooltip("All floats in this array must add up to 100. This array must be the same size as the plankPrefab.")]
-    [SerializeField]
-    private float[] percentages;
+    private PlankArrayData plankArray;
     private float previousPercentage = 0;
+    private float randomNum;
 
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
         GameObject newlyBirthedPlank;
 
-        newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
+        //newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
+        newlyBirthedPlank = Instantiate(DeterminePlankToSpawn(), newPlankSpawnPosition, newPlankSpawnRotation);
 
         newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
 
         return newlyBirthedPlank;
     }
 
-    private void DeterminePlankToSpawn()
+    private GameObject DeterminePlankToSpawn()
     {
-        /*
-         * small: 40, medium: 30, large: 30
-         * 
-         * num < 40 = small
-         * else if
-         * num < 40 + 30 = Medium
-         * else if
-         * num < 40 + 30 + 30 = Large
-         * 
-         * previousPercentage = 0
-         * 
-         * for(i - 0; i < boards.length; i++)
-         * {
-         * if (num < previousPercentage + percentages[i]
-         * {
-         * SpawnBoard(_boards[i]);
-         * previousPercentage += percentages[i];
-         * }
-         * }
-         * 
-         * Gameobject boards [9]
-         * float[9] percentages = 100;
-         */
+        previousPercentage = 0;
+        randomNum = Random.Range(0, 100);
+        Debug.Log(randomNum);
+
+        for (int i = 0; i < plankArray.plankPrefabs.Length; i++)
+        {
+            if (randomNum < previousPercentage + plankArray.percentages[i])
+            {
+                //Spawn this board
+                return plankArray.plankPrefabs[i];
+            }
+            previousPercentage += plankArray.percentages[i];
+        }
+
+        return plankArray.plankPrefabs[0];
     }
 
 }

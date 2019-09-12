@@ -339,9 +339,9 @@ public class PlankManager : MonoBehaviour
         //give them points
         if (playerWhoPlacedMe != null)
         {
-            playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace();
+            playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace(plankSize.PointsForPlace);
             //show
-            GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, GameManager.S.player1.GetComponent<Points>().pointsForBoardPlace);
+            GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, plankSize.PointsForPlace);
             /*playerWhoPlacedMe.GetComponent<FlashyPoints>().ShowPointsGained(playerWhoPlacedMe.transform.position,
                 playerWhoPlacedMe.GetComponent<Points>().pointsForBoardPlace);*/
         }

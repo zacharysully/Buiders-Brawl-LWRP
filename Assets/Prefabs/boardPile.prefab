@@ -95,6 +95,8 @@ MonoBehaviour:
   - {fileID: 6879533599162455654, guid: 4648a00a6f0fc4644926f91cfb3e9b4b, type: 3}
   - {fileID: 6087109645313124721, guid: 5a69423163cc32e40b692218699977c1, type: 3}
   - {fileID: 7561570254513574992, guid: b9b9d0959fb61854d9987c930dc0e546, type: 3}
+  percentages: []
+  plankArray: {fileID: 11400000, guid: 58e9711892f92fb44b30ae8bb71239ea, type: 2}
 --- !u!65 &200439474
 BoxCollider:
   m_ObjectHideFlags: 0
