@@ -70,65 +70,7 @@ public class LevelCameraController : VirtualCameraControllerBase
         midpoint = (furthestPlayer1 + furthestPlayer2) / 2;
         //Debug.Log(midpoint);
 
-        //find the midpoint between the active players
-        //find for 4 players
-        /*if (GameManager.S.playerList.Count == 4)
-        {
-            float p1p4Dist = Vector3.Distance(GameManager.S.playerList[0].transform.position, GameManager.S.playerList[3].transform.position);
-            float p2p4Dist = Vector3.Distance(GameManager.S.playerList[1].transform.position, GameManager.S.playerList[3].transform.position);
-            float p3p4Dist = Vector3.Distance(GameManager.S.playerList[2].transform.position, GameManager.S.playerList[3].transform.position);
-
-            if (p1p4Dist > furthestDistance)
-            {
-                furthestDistance = p1p4Dist;
-                furthestPlayer1 = GameManager.S.playerList[0].gameObject.transform.position;
-                furthestPlayer2 = GameManager.S.playerList[3].gameObject.transform.position;
-            }
-            if (p2p4Dist > furthestDistance)
-            {
-                furthestDistance = p2p4Dist;
-                furthestPlayer1 = GameManager.S.playerList[1].gameObject.transform.position;
-                furthestPlayer2 = GameManager.S.playerList[3].gameObject.transform.position;
-            }
-            if (p3p4Dist > furthestDistance)
-            {
-                furthestDistance = p3p4Dist;
-                furthestPlayer1 = GameManager.S.playerList[2].gameObject.transform.position;
-                furthestPlayer2 = GameManager.S.playerList[3].gameObject.transform.position;
-            }
-
-            //find for 3 players
-            
-            }
-        if (GameManager.S.playerList.Count == 3)
-        {
-            float p1p3Dist = Vector3.Distance(GameManager.S.playerList[0].transform.position, GameManager.S.playerList[2].transform.position);
-            float p2p3Dist = Vector3.Distance(GameManager.S.playerList[1].transform.position, GameManager.S.playerList[2].transform.position);
-
-            if (p1p3Dist > furthestDistance)
-            {
-                furthestDistance = p1p3Dist;
-                furthestPlayer1 = GameManager.S.playerList[0].gameObject.transform.position;
-                furthestPlayer2 = GameManager.S.playerList[2].gameObject.transform.position;
-            }
-            if (p2p3Dist > furthestDistance)
-            {
-                furthestDistance = p2p3Dist;
-                furthestPlayer1 = GameManager.S.playerList[1].gameObject.transform.position;
-                furthestPlayer2 = GameManager.S.playerList[2].gameObject.transform.position;
-            }
-            
-        }
-        //find for 2 players
-        if (GameManager.S.playerList.Count == 2)
-        {
-            float p1p2Dist = Vector3.Distance(GameManager.S.playerList[0].transform.position, GameManager.S.playerList[3].transform.position);
-
-            furthestPlayer1 = GameManager.S.playerList[0].gameObject.transform.position;
-            furthestPlayer2 = GameManager.S.playerList[1].gameObject.transform.position;
-
-
-        }*/
+        
 
 
     }
