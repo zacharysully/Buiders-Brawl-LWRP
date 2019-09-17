@@ -9,7 +9,9 @@ public class LevelCameraController : VirtualCameraControllerBase
     public Transform followObject;
     public float followXOffset = 30;
     float furthestDistance = 0f;
+    [SerializeField]
     private Vector3 furthestPlayer1 = Vector3.zero;
+    [SerializeField]
     private Vector3 furthestPlayer2 = Vector3.zero;
     private float height = 0;
     public float cameraYHeightFloor;
@@ -51,6 +53,7 @@ public class LevelCameraController : VirtualCameraControllerBase
     void FindMidpoint()
     {
         furthestDistance = 0;
+        //Debug.Log(GameManager.S.playerList.Count);
         for (int i = 0; i < GameManager.S.playerList.Count; ++i)
         {
             for (int j = 0; j < GameManager.S.playerList.Count; ++j)

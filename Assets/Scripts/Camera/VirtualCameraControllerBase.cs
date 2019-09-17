@@ -8,6 +8,9 @@ public class VirtualCameraControllerBase : MonoBehaviour
     //add to the master
 
     public MasterCameraController controllerRef;
+    public bool isStartingCam;
+
+    public MasterCameraController MasterCamController { get => controllerRef; }
 
     // Start is called before the first frame update
     public virtual void Start()

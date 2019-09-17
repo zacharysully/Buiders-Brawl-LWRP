@@ -336,7 +336,7 @@ public class CameraController : MonoBehaviour
 
             if (!isRightToLeft)
             {
-                cameraRef.transform.LookAt(new Vector3(cameraRef.transform.position.x, startGameStart.transform.position.y, -20));
+                //cameraRef.transform.LookAt(new Vector3(cameraRef.transform.position.x, startGameStart.transform.position.y, -20));
             }
             else
             {
@@ -351,20 +351,20 @@ public class CameraController : MonoBehaviour
             {
                 isStart = false;
 
-                if(UICanvas != null)
+                /*if(UICanvas != null)
                 {
                     UICanvas.SetActive(true);
                     UICanvas.GetComponent<Countdown>().startTimer = true;
-                }
+                }*/
 
                 //reset their positions to their spawn points
-                player1ref.transform.position = player1ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
+                /*player1ref.transform.position = player1ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
                 player2ref.transform.position = player2ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
                 if(player3ref != null)
                     player3ref.transform.position = player3ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
                 if(player4ref != null)
                     player4ref.transform.position = player4ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
-
+*/
                 //Debug.Log("startTime = " + UICanvas.GetComponent<Countdown>().startTimer);
 
                 //play audio clip
