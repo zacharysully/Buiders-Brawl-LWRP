@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8db4db366b7b064dadc3d2b70e90f4c, type: 3}
   m_Name: PlankSmall
   m_EditorClassIdentifier: 
+  plankType: Small
   playerMovementSpeed: 3.35
   pointsForPlace: 30

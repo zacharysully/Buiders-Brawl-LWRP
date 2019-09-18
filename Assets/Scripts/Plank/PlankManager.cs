@@ -342,6 +342,22 @@ public class PlankManager : MonoBehaviour
             playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace(plankSize.PointsForPlace);
             //show
             GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, plankSize.PointsForPlace);
+            switch (plankSize.PlankType)
+            {
+                case "Small":
+                    GameLogger.numSmallBoardsPlaced++;
+                    break;
+                case "Medium":
+                    GameLogger.numMedBoardsPlaced++;
+                    break;
+                case "Large":
+                    GameLogger.numLargeBoardsPlaced++;
+                    break;
+                default:
+                    break;
+            }
+            //GameLogger.numRegBoardsPlaced++;
+
             /*playerWhoPlacedMe.GetComponent<FlashyPoints>().ShowPointsGained(playerWhoPlacedMe.transform.position,
                 playerWhoPlacedMe.GetComponent<Points>().pointsForBoardPlace);*/
         }
