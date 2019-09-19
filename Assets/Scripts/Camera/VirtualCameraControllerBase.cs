@@ -9,6 +9,7 @@ public class VirtualCameraControllerBase : MonoBehaviour
 
     public MasterCameraController controllerRef;
     public bool isStartingCam;
+    public bool isPostGameCam;
 
     public MasterCameraController MasterCamController { get => controllerRef; }
 

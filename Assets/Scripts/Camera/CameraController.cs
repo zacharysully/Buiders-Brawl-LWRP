@@ -213,7 +213,7 @@ public class CameraController : MonoBehaviour
         Time.timeScale = 1f;
         
         //trigger the camera sweep before the game starts
-        cameraRef.transform.position = startGameStart.transform.position;
+        //cameraRef.transform.position = startGameStart.transform.position;
         //set the audio source to the camera's audio source
         audio = cameraRef.GetComponent<AudioSource>();
         //set the first audio clip to be played as the start round noise
@@ -343,11 +343,11 @@ public class CameraController : MonoBehaviour
                 cameraRef.transform.LookAt(new Vector3(cameraRef.transform.position.x, startGameStart.transform.position.y, 20));
             }
             //cameraRef.transform.Rotate(new Vector3(0, -90, 0), Space.World);
-            cameraRef.transform.position = Vector3.Lerp(cameraRef.transform.position, startGameEnd.transform.position, sweepStartLerpRate);
+            //cameraRef.transform.position = Vector3.Lerp(cameraRef.transform.position, startGameEnd.transform.position, sweepStartLerpRate);
             sweepStartLerpRate = Mathf.Lerp(sweepStartLerpRate, sweepEndLerpRate, .02f);
             //Debug.Log("Start lerp rate = " + startLerpRate);
             //change isStart once it is close enough
-            if (Vector3.Distance(cameraRef.transform.position, startGameEnd.transform.position) < 1f)
+            /*if (Vector3.Distance(cameraRef.transform.position, startGameEnd.transform.position) < 1f)
             {
                 isStart = false;
 
@@ -357,24 +357,24 @@ public class CameraController : MonoBehaviour
                     UICanvas.GetComponent<Countdown>().startTimer = true;
                 }*/
 
-                //reset their positions to their spawn points
-                /*player1ref.transform.position = player1ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
-                player2ref.transform.position = player2ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
-                if(player3ref != null)
-                    player3ref.transform.position = player3ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
-                if(player4ref != null)
-                    player4ref.transform.position = player4ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
+            //reset their positions to their spawn points
+            /*player1ref.transform.position = player1ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
+            player2ref.transform.position = player2ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
+            if(player3ref != null)
+                player3ref.transform.position = player3ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
+            if(player4ref != null)
+                player4ref.transform.position = player4ref.GetComponent<PlayerDeath>().spawnPoint.transform.position;
 */
-                //Debug.Log("startTime = " + UICanvas.GetComponent<Countdown>().startTimer);
+            //Debug.Log("startTime = " + UICanvas.GetComponent<Countdown>().startTimer);
 
-                //play audio clip
-                //audio.Play(0);  //TOM CUT THIS OUT CAUSE IT BREAKS THE GAME
-                //change audio clip to the end of game sound
-                //audio.clip = clips[1];  //TOM CUT THIS OUT CAUSE IT BREAKS THE GAME
-            }
+            //play audio clip
+            //audio.Play(0);  //TOM CUT THIS OUT CAUSE IT BREAKS THE GAME
+            //change audio clip to the end of game sound
+            //audio.clip = clips[1];  //TOM CUT THIS OUT CAUSE IT BREAKS THE GAME
+            //}
+            //}
+
         }
-
-
         else if (setCameraBasedOnPlayers && !winnerDetermined)
         {
             //distance must be called before average pos
@@ -469,18 +469,18 @@ public class CameraController : MonoBehaviour
 
 
                 //--------------
-               /* int playersDead = 0;
-                foreach (PlayerController player in GameManager.S.playerList)
-                {
-                    if (player.playerDeath.playerDead)
-                    {
-                        playersDead++;
-                    }
-                }
-                if (playersDead > 1)
-                {
-                    
-                }*/
+                /* int playersDead = 0;
+                 foreach (PlayerController player in GameManager.S.playerList)
+                 {
+                     if (player.playerDeath.playerDead)
+                     {
+                         playersDead++;
+                     }
+                 }
+                 if (playersDead > 1)
+                 {
+
+                 }*/
 
                 SetDeathEndValues();
 
@@ -494,7 +494,7 @@ public class CameraController : MonoBehaviour
 
                 pitchPercent = (distanceBetweenPlayers - cameraPlayerDistanceFloor) / (cameraPlayerDistanceCeiling - cameraPlayerDistanceFloor);
                 //cameraZOffset = -6.5f;
-                
+
                 //set the final camera position to the right spot
                 SetCameraPosition(averagePositionBetweenPlayers);
 

@@ -34,6 +34,12 @@ public class LevelCameraController : VirtualCameraControllerBase
         midpointT.transform.position = Vector3.Lerp(midpointT.transform.position, midpoint, 0.015f);
         followObject.position = new Vector3(midpointT.position.x + followXOffset, FindHeight(), midpointT.position.z);
         //followObject.position = Vector3.Lerp(followObject.position, new Vector3(midpointT.position.x + followXOffset, FindHeight(), midpointT.position.z), .05f);
+
+        //detect a winner, change cameras
+        if(GameManager.S.winner != null)
+        {
+            MasterCamController.SwitchCamera("Postgame Freelook");
+        }
     }
 
     float FindHeight()

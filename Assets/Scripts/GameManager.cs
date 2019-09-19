@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
 
 
         playerListAsArray = GameObject.FindObjectsOfType<PlayerController>();
-        Debug.Log("playerList.Length = " + playerListAsArray.Length);
+        //Debug.Log("playerList.Length = " + playerListAsArray.Length);
 
         for (int index = 0; index < playerListAsArray.Length; index++)
         {
