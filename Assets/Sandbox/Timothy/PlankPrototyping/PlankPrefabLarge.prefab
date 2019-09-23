@@ -175,7 +175,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plankState: 0
+  _currentBoardsOut: {fileID: 11400000, guid: ba963e75cd1c9a5439572520015057d7, type: 2}
   plankSize: {fileID: 11400000, guid: 990a2b37d610bc5419aa0a3344422a9b, type: 2}
+  _startTime: 0
 --- !u!1 &5128911880906150013
 GameObject:
   m_ObjectHideFlags: 0
