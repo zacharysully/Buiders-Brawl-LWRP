@@ -348,9 +348,18 @@ public class PlayerActions : MonoBehaviour
                 //make plank
                 GameObject newPlank = boxHitInfo[index].collider.gameObject.GetComponent<PlankPile>().GeneratePlank(this.gameObject.transform.position, this.gameObject.transform.rotation);
 
-                //pivk it up
-                PickUpPlank(newPlank);
-                didNotFindPlank = false;
+                
+                if (newPlank != null)
+                {
+                    //pivk it up
+                    PickUpPlank(newPlank);
+                    didNotFindPlank = false;
+                }
+                else
+                {
+                    didNotFindPlank = true;
+                }
+                
                 //stop looking (stop for loop)
                 index = boxHitInfo.Length;
             }

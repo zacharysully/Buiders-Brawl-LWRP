@@ -24,6 +24,9 @@ public class PlankManager : MonoBehaviour
 
     public PlankState plankState;
 
+    [SerializeField]
+    FloatVariable _currentBoardsOut;
+
     public PlankBase plankSize;
 
     private SnapTest2 snapRef;
@@ -37,6 +40,10 @@ public class PlankManager : MonoBehaviour
     private float timePlankCreated;
 
     private bool earlyPlank = true;
+
+    float _despawnTimer = 20;
+    [SerializeField]
+    float _startTime;
 
     //------------------------------------------------------------------------------------------------------
 
@@ -55,6 +62,20 @@ public class PlankManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         earlyPlank = false;
+    }
+
+    IEnumerator DespawnTimer()
+    {
+        yield return new WaitForSeconds(_despawnTimer);
+
+        float _currentTime = Time.time - _startTime;
+
+        Debug.Log(_currentTime);
+        if(_currentTime >= _despawnTimer - 1)
+        {
+            _currentBoardsOut.Value--;
+            Destroy(gameObject);
+        }
     }
 
     public void PickUpSpawn()
@@ -145,6 +166,8 @@ public class PlankManager : MonoBehaviour
 
         //animation
         StartCoroutine(plankAnim.PutDownPlankAnim());
+
+        _startTime = Time.time;
     }
 
     public void PlacingPlank()
@@ -249,9 +272,7 @@ public class PlankManager : MonoBehaviour
 
         SetToHitPlayers();
 
-
-
-
+        StartCoroutine(DespawnTimer());
         //StartCoroutine(DropDelaySetToHitPlayers());
 
         /*
@@ -339,7 +360,10 @@ public class PlankManager : MonoBehaviour
         //give them points
         if (playerWhoPlacedMe != null)
         {
+            _currentBoardsOut.Value--;
+
             playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace(plankSize.PointsForPlace);
+
             //show
             GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, plankSize.PointsForPlace);
             switch (plankSize.PlankType)

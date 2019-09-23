@@ -9,6 +9,22 @@ public class PlankPile : MonoBehaviour
     //generates plank
 
     //gives plank to player
+
+    public GameObject[] plankPrefab;
+
+    [Header("Limited Number of Boards Variables")]
+    [SerializeField]
+    FloatVariable _amountOfBoardsAllowed;
+    [SerializeField]
+    FloatVariable _usedPlanks;
+
+    public FloatVariable UsedPlanks { get => _usedPlanks; set => _usedPlanks = value; }
+
+    private void Start()
+    {
+        _usedPlanks.Value = 0;
+    }
+
     [SerializeField]
     private PlankArrayData plankArray;
     private float previousPercentage = 0;
@@ -16,14 +32,23 @@ public class PlankPile : MonoBehaviour
 
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
-        GameObject newlyBirthedPlank;
+        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
+        {
+            return null;
+        }
+        else
+        {
+            GameObject newlyBirthedPlank;
 
         //newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
         newlyBirthedPlank = Instantiate(DeterminePlankToSpawn(), newPlankSpawnPosition, newPlankSpawnRotation);
-
+        
         newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
 
-        return newlyBirthedPlank;
+            _usedPlanks.Value++;
+
+            return newlyBirthedPlank;
+        }
     }
 
     private GameObject DeterminePlankToSpawn()
