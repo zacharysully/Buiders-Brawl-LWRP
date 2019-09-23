@@ -25,6 +25,11 @@ public class PlankPile : MonoBehaviour
         _usedPlanks.Value = 0;
     }
 
+    [SerializeField]
+    private PlankArrayData plankArray;
+    private float previousPercentage = 0;
+    private float randomNum;
+
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
         if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
@@ -35,14 +40,34 @@ public class PlankPile : MonoBehaviour
         {
             GameObject newlyBirthedPlank;
 
-            newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
-
-            newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
+        //newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
+        newlyBirthedPlank = Instantiate(DeterminePlankToSpawn(), newPlankSpawnPosition, newPlankSpawnRotation);
+        
+        newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
 
             _usedPlanks.Value++;
 
             return newlyBirthedPlank;
         }
+    }
+
+    private GameObject DeterminePlankToSpawn()
+    {
+        previousPercentage = 0;
+        randomNum = Random.Range(0, 100);
+        Debug.Log(randomNum);
+
+        for (int i = 0; i < plankArray.plankPrefabs.Length; i++)
+        {
+            if (randomNum < previousPercentage + plankArray.percentages[i])
+            {
+                //Spawn this board
+                return plankArray.plankPrefabs[i];
+            }
+            previousPercentage += plankArray.percentages[i];
+        }
+
+        return plankArray.plankPrefabs[0];
     }
 
 }

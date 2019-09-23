@@ -27,6 +27,8 @@ public class PlankManager : MonoBehaviour
     [SerializeField]
     FloatVariable _currentBoardsOut;
 
+    public PlankBase plankSize;
+
     private SnapTest2 snapRef;
 
     private PlayerController playerWhoPlacedMe;
@@ -358,11 +360,28 @@ public class PlankManager : MonoBehaviour
         //give them points
         if (playerWhoPlacedMe != null)
         {
-            playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace();
-
             _currentBoardsOut.Value--;
+
+            playerWhoPlacedMe.GetComponent<Points>().AddPointsForBoardPlace(plankSize.PointsForPlace);
+
             //show
-            GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, GameManager.S.player1.GetComponent<Points>().pointsForBoardPlace);
+            GameManager.S.player1.GetComponent<FlashyPoints>().ShowPointsGained(transform.position, plankSize.PointsForPlace);
+            switch (plankSize.PlankType)
+            {
+                case "Small":
+                    GameLogger.numSmallBoardsPlaced++;
+                    break;
+                case "Medium":
+                    GameLogger.numMedBoardsPlaced++;
+                    break;
+                case "Large":
+                    GameLogger.numLargeBoardsPlaced++;
+                    break;
+                default:
+                    break;
+            }
+            //GameLogger.numRegBoardsPlaced++;
+
             /*playerWhoPlacedMe.GetComponent<FlashyPoints>().ShowPointsGained(playerWhoPlacedMe.transform.position,
                 playerWhoPlacedMe.GetComponent<Points>().pointsForBoardPlace);*/
         }
