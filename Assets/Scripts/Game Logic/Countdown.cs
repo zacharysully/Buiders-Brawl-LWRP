@@ -16,7 +16,7 @@ public class Countdown : MonoBehaviour
     public GameObject cd_panel;
     public Image cd_icon;
 
-    public bool startTimer = false;
+    public bool startTimer = true;
     [HideInInspector]
     public bool countDown = true;
 
