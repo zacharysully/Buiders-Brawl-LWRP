@@ -98,14 +98,17 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 PlayerSideMovement(Vector3 direction, PlayerController.PlayerState pState)
     {
+        PlankManager plankManagerRef;
+
         
         //if player jumping or holding plank slow them down
         if(playerController.playerState == PlayerController.PlayerState.jumping)
         {
-
             //and add small amount of input direction
+            /*playerFinalDirection = (direction * playerSpeed) - ((direction * playerSpeed) * slowDownJumpSpeedPercentage);
+            reversePlayerMovementFromJoysticks = ((direction * playerSpeed)- ((direction * playerSpeed) * slowDownJumpSpeedPercentage)) * -1;*/
             playerFinalDirection = (direction * playerSpeed) - ((direction * playerSpeed) * slowDownJumpSpeedPercentage);
-            reversePlayerMovementFromJoysticks = ((direction * playerSpeed)- ((direction * playerSpeed) * slowDownJumpSpeedPercentage)) * -1;
+            reversePlayerMovementFromJoysticks = ((direction * playerSpeed) - ((direction * playerSpeed) * slowDownJumpSpeedPercentage)) * -1;
 
             //TODO: figure out how to stop player from doing accelerated jump
             //clamp magnitude so players cannot accelerate past momentum
@@ -113,9 +116,13 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(playerController.playerActions.HeldPlank != null)
         {
+            plankManagerRef = this.gameObject.GetComponentInChildren<PlankManager>();
+            float adjustedPlayerSpeed = plankManagerRef.plankSize.PlayerMovementSpeed;
             //and add small amount of input direction
-            playerFinalDirection = (direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage);
-            reversePlayerMovementFromJoysticks = ((direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;
+             playerFinalDirection = (direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage);
+             reversePlayerMovementFromJoysticks = ((direction * adjustedPlayerSpeed) - ((direction * adjustedPlayerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;
+            /*playerFinalDirection = (direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage);
+            reversePlayerMovementFromJoysticks = ((direction * playerSpeed) - ((direction * playerSpeed) * slowDownHoldingPlankSpeedPercentage)) * -1;*/
         }
         else
         {

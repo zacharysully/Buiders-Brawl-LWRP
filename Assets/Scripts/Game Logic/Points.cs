@@ -45,10 +45,10 @@ public class Points : MonoBehaviour
         AddPlayerKill();
     }
 
-    public void AddPointsForBoardPlace()
+    public void AddPointsForBoardPlace(int points)
     {
         //Debug.Log("Points given for a board place");
-        pointsTotal += pointsForBoardPlace;
+        pointsTotal += points;
         PrintPointsTotal();
         AddPlayerBuild();
     }
