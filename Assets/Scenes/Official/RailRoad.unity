@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.48316836, g: 0.48849595, b: 0.5009352, a: 1}
+  m_IndirectSpecularColor: {r: 0.48318112, g: 0.4879114, b: 0.5009766, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7145,7 +7145,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.4e-44, y: 1.1e-44, z: 0, w: 7.8e-44}
+  m_BoundingSphereOverride: {x: 9.498664e-39, y: 4e-45, z: 1e-45, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 90
@@ -39870,7 +39870,7 @@ PrefabInstance:
     - target: {fileID: 1219435167560681248, guid: 9f696b49a827a3044882a85a174dccf6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20584604
+      value: 0.20584603
       objectReference: {fileID: 0}
     - target: {fileID: 1219435167560681248, guid: 9f696b49a827a3044882a85a174dccf6,
         type: 3}
@@ -39880,7 +39880,7 @@ PrefabInstance:
     - target: {fileID: 1219435167560681248, guid: 9f696b49a827a3044882a85a174dccf6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20906103
+      value: 0.20906101
       objectReference: {fileID: 0}
     - target: {fileID: 1219435167560681248, guid: 9f696b49a827a3044882a85a174dccf6,
         type: 3}
@@ -44038,7 +44038,7 @@ PrefabInstance:
     - target: {fileID: 1166491201448265944, guid: 3f9aecfd1d840ee4ab1796891c06b0f9,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20584604
+      value: 0.20584603
       objectReference: {fileID: 0}
     - target: {fileID: 1166491201448265944, guid: 3f9aecfd1d840ee4ab1796891c06b0f9,
         type: 3}
@@ -44048,7 +44048,7 @@ PrefabInstance:
     - target: {fileID: 1166491201448265944, guid: 3f9aecfd1d840ee4ab1796891c06b0f9,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.20906103
+      value: 0.20906101
       objectReference: {fileID: 0}
     - target: {fileID: 1166491201448265944, guid: 3f9aecfd1d840ee4ab1796891c06b0f9,
         type: 3}
@@ -48667,7 +48667,7 @@ PrefabInstance:
     - target: {fileID: 2452697667803802988, guid: 90fecd509f8421045a7e40a875876d99,
         type: 3}
       propertyPath: inputType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1753385755599016872, guid: 90fecd509f8421045a7e40a875876d99,
         type: 3}
@@ -49170,27 +49170,32 @@ PrefabInstance:
     - target: {fileID: 7404279319794140049, guid: 7dc8fe280b4a0124ca448837b5962aaf,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.15901037
+      value: -0.15901034
       objectReference: {fileID: 0}
     - target: {fileID: 7404279319794140049, guid: 7dc8fe280b4a0124ca448837b5962aaf,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3190329
+      value: -0.31903294
       objectReference: {fileID: 0}
     - target: {fileID: 7404279319794140049, guid: 7dc8fe280b4a0124ca448837b5962aaf,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.05438811
+      value: 0.054388095
       objectReference: {fileID: 0}
     - target: {fileID: 7404279319170103450, guid: 7dc8fe280b4a0124ca448837b5962aaf,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.022349486
+      value: -0.022349464
       objectReference: {fileID: 0}
     - target: {fileID: 7404279319170103450, guid: 7dc8fe280b4a0124ca448837b5962aaf,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.32286325
+      objectReference: {fileID: 0}
+    - target: {fileID: 7404279319170103450, guid: 7dc8fe280b4a0124ca448837b5962aaf,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.06534042
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc8fe280b4a0124ca448837b5962aaf, type: 3}
@@ -52342,7 +52347,7 @@ PrefabInstance:
     - target: {fileID: 4205513807017318959, guid: a976d66702bbc334d9a158045b06242f,
         type: 3}
       propertyPath: inputType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 925820139, guid: a976d66702bbc334d9a158045b06242f, type: 3}
       propertyPath: spawnPoint
