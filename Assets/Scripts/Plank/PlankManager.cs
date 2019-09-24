@@ -45,6 +45,8 @@ public class PlankManager : MonoBehaviour
     [SerializeField]
     float _startTime;
 
+    public FloatVariable CurrentBoardsOut { get => _currentBoardsOut; set => _currentBoardsOut = value; }
+
     //------------------------------------------------------------------------------------------------------
 
     private void Start()

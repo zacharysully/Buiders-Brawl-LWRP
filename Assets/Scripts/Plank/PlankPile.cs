@@ -30,6 +30,20 @@ public class PlankPile : MonoBehaviour
     private float previousPercentage = 0;
     private float randomNum;
 
+    private void Update()
+    {
+        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
         if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
