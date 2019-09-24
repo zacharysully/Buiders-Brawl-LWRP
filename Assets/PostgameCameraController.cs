@@ -41,8 +41,6 @@ public class PostgameCameraController : VirtualCameraControllerBase
     // Update is called once per frame
     void Update()
     {
-        
-
         if(GameManager.S.winner != null && !winnerDetermined)
         {
             //set the winner
