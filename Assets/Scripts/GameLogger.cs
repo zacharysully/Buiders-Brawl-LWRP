@@ -8,10 +8,10 @@ public static class GameLogger
 {
     public static string levelName = "Test Level";
     public static string gameTime = "00:00";
-    public static int numSmallBoardsPlaced = 0;
-    public static int numMedBoardsPlaced = 0;
-    public static int numLargeBoardsPlaced = 0;
-    //public static int numRegBoardsPlaced = 0;
+    //public static int numSmallBoardsPlaced = 0;
+    //public static int numMedBoardsPlaced = 0;
+    //public static int numLargeBoardsPlaced = 0;
+    public static int numRegBoardsPlaced = 0;
     private static string fileToWriteTo;
 
     public static void SetupFiles()
@@ -54,10 +54,10 @@ public static class GameLogger
 
         writer.WriteLine("Level Name: " + levelName);
         writer.WriteLine("Game Time: " + gameTime);
-        writer.WriteLine("Number of Small Boards Placed: " + numSmallBoardsPlaced);
-        writer.WriteLine("Number of Medium Boards Placed: " + numMedBoardsPlaced);
-        writer.WriteLine("Number of Large Boards Placed: " + numLargeBoardsPlaced);
-        //writer.WriteLine("Number of Regular Boards Placed: " + numRegBoardsPlaced);
+        //writer.WriteLine("Number of Small Boards Placed: " + numSmallBoardsPlaced);
+        //writer.WriteLine("Number of Medium Boards Placed: " + numMedBoardsPlaced);
+        //writer.WriteLine("Number of Large Boards Placed: " + numLargeBoardsPlaced);
+        writer.WriteLine("Number of Regular Boards Placed: " + numRegBoardsPlaced);
         writer.WriteLine("");
         writer.Close();
     }

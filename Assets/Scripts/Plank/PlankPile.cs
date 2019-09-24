@@ -25,8 +25,22 @@ public class PlankPile : MonoBehaviour
         _usedPlanks.Value = 0;
     }
 
-    [SerializeField]
-    private PlankArrayData plankArray;
+    private void Update()
+    {
+        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
+    //[SerializeField]
+    //private PlankArrayData plankArray;
     private float previousPercentage = 0;
     private float randomNum;
 
@@ -40,8 +54,8 @@ public class PlankPile : MonoBehaviour
         {
             GameObject newlyBirthedPlank;
 
-        //newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
-        newlyBirthedPlank = Instantiate(DeterminePlankToSpawn(), newPlankSpawnPosition, newPlankSpawnRotation);
+        newlyBirthedPlank = Instantiate(plankPrefab[Random.Range(0, plankPrefab.Length)], newPlankSpawnPosition, newPlankSpawnRotation);
+        //newlyBirthedPlank = Instantiate(DeterminePlankToSpawn(), newPlankSpawnPosition, newPlankSpawnRotation);
         
         newlyBirthedPlank.GetComponent<PlankManager>().PickUpSpawn();
 
@@ -51,13 +65,14 @@ public class PlankPile : MonoBehaviour
         }
     }
 
+    /*
     private GameObject DeterminePlankToSpawn()
     {
         previousPercentage = 0;
         randomNum = Random.Range(0, 100);
         Debug.Log(randomNum);
 
-        for (int i = 0; i < plankArray.plankPrefabs.Length; i++)
+        for (int i = 0; i < plankPrefab.Length; i++)
         {
             if (randomNum < previousPercentage + plankArray.percentages[i])
             {
@@ -69,5 +84,6 @@ public class PlankPile : MonoBehaviour
 
         return plankArray.plankPrefabs[0];
     }
+    */
 
 }
