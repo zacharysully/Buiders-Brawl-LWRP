@@ -98,6 +98,7 @@ MonoBehaviour:
   _amountOfBoardsAllowed: {fileID: 11400000, guid: aecb48e16397b6646bcb077790eb551a,
     type: 2}
   _usedPlanks: {fileID: 11400000, guid: ba963e75cd1c9a5439572520015057d7, type: 2}
+  plankArray: {fileID: 11400000, guid: 58e9711892f92fb44b30ae8bb71239ea, type: 2}
 --- !u!65 &200439474
 BoxCollider:
   m_ObjectHideFlags: 0
