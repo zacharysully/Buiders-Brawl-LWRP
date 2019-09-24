@@ -40,7 +40,7 @@ public class PlayerActions : MonoBehaviour
     //[SerializeField]
     private Vector3 boxCastOffset = new Vector3(0,0,0);
     //[SerializeField]
-    private Vector3 boxCasthalfSize = new Vector3(.7f, 1.5f, .1f);
+    private Vector3 boxCasthalfSize = new Vector3(.7f, 1.5f, .1f); //Original: .7f, 1.5f, .1f
     //[SerializeField]
     private float boxCastMaxDistancePlankPickUp = 1.5f;
     [SerializeField]
@@ -256,7 +256,7 @@ public class PlayerActions : MonoBehaviour
 
         //print("Push action");
         //make boxcast in front of player
-        SeeWhatIsInFrontOfPlayer(boxCastMaxDistancePush);
+        SeeWhatIsInFrontOfPlayer(boxCastMaxDistancePush, .5f);
 
         //if hits opponent knock back opponent
         for (int index = 0; index < boxHitInfo.Length; index++)
@@ -322,7 +322,7 @@ public class PlayerActions : MonoBehaviour
 
 
         //boxcast (makes an array)
-        SeeWhatIsInFrontOfPlayer(boxCastMaxDistancePlankPickUp);
+        SeeWhatIsInFrontOfPlayer(boxCastMaxDistancePlankPickUp, 1f);
 
         //bool to determine whether animation goes back to idle
         didNotFindPlank = true;
@@ -520,7 +520,7 @@ public class PlayerActions : MonoBehaviour
         //set current PAT
         currentPAT = PlayerActionType.slam;
 
-        SeeWhatIsInFrontOfPlayer(boxCastMaxDistanceSlam);
+        SeeWhatIsInFrontOfPlayer(boxCastMaxDistanceSlam, .25f);
         if (testCubes)
         {
             TestBoxCast(startCube, endCube, boxCastMaxDistanceSlam);
@@ -671,12 +671,12 @@ public class PlayerActions : MonoBehaviour
     }
 
     //boxcast
-    public void SeeWhatIsInFrontOfPlayer(float maxDistance)
+    public void SeeWhatIsInFrontOfPlayer(float maxDistance, float halfSizeMultiplier)
     {
         playerRotation = this.gameObject.transform.rotation;
         playerForward = this.gameObject.transform.forward;
 
-        boxHitInfo = Physics.BoxCastAll(this.transform.position + boxCastOffset, boxCasthalfSize, playerForward, playerRotation, maxDistance);
+        boxHitInfo = Physics.BoxCastAll(this.transform.position + boxCastOffset, boxCasthalfSize * halfSizeMultiplier, playerForward, playerRotation, maxDistance);
     }
 }
 
