@@ -95,6 +95,9 @@ MonoBehaviour:
   - {fileID: 6879533599162455654, guid: 4648a00a6f0fc4644926f91cfb3e9b4b, type: 3}
   - {fileID: 6087109645313124721, guid: 5a69423163cc32e40b692218699977c1, type: 3}
   - {fileID: 7561570254513574992, guid: b9b9d0959fb61854d9987c930dc0e546, type: 3}
+  _amountOfBoardsAllowed: {fileID: 11400000, guid: aecb48e16397b6646bcb077790eb551a,
+    type: 2}
+  _usedPlanks: {fileID: 11400000, guid: ba963e75cd1c9a5439572520015057d7, type: 2}
 --- !u!65 &200439474
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -106,5 +109,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.4, y: 1, z: 2.5}
-  m_Center: {x: 0, y: 0.49305058, z: -0.00847435}
+  m_Size: {x: 3.02, y: 2.87, z: 2.41}
+  m_Center: {x: -0.18, y: 0.49305058, z: 0.25}
