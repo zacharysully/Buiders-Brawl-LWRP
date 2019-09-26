@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Countdown : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class Countdown : MonoBehaviour
     [HideInInspector]
     public bool countDown = true;
 
+    public static float startTime;
+    private bool onlyOnce = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +39,8 @@ public class Countdown : MonoBehaviour
         GameManager.S.player4.GetComponent<PlayerController>().enabled = false;
 
         cd_icon.enabled = false;
+
+        GameLogger.SetupFiles();
     }
 
     // Update is called once per frame
@@ -70,6 +76,12 @@ public class Countdown : MonoBehaviour
                     GameManager.S.player3.GetComponent<PlayerController>().enabled = true;
                     GameManager.S.player4.GetComponent<PlayerController>().enabled = true;
                     countDown = false;
+                    if (!onlyOnce)
+                    {
+                        GameLogger.levelName = SceneManager.GetActiveScene().name;
+                        startTime = Time.time;
+                        onlyOnce = true;
+                    }
                 }
                 delay = delayStart;
             }
