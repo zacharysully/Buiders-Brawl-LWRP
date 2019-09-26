@@ -21,23 +21,26 @@ public class PostgameCameraController : VirtualCameraControllerBase
     private bool winnerDetermined = false;
     public float endYValue = .75f;
     private bool startFromBottom = true;
+    public WinUI winUIRef;
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
 
-        
-        //make sure camera is in the right spot
-        
-        
+
+        //make sure the winUI is set up
+        if (winUIRef == null)
+        {
+            winUIRef = WinUI.S;
+            //winUIRef.gameObject.SetActive(false);
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-
         if(GameManager.S.winner != null && !winnerDetermined)
         {
             //set the winner
@@ -45,6 +48,15 @@ public class PostgameCameraController : VirtualCameraControllerBase
 
             followObject.transform.position = winner.transform.position;
             followObject.transform.eulerAngles = winner.transform.eulerAngles + new Vector3(0, 140, 0);
+
+            //turn on winUI
+            winUIRef.gameObject.SetActive(true);
+            GameManager.S.winner.GetComponent<Points>().MakeWinner();
+            //Debug.Log("WINUIREF ACTIVE");
+
+            GameManager.S.winner.GetComponent<FlashyPoints>().ShowPointsGained(GameManager.S.winner.gameObject.transform.position, GameManager.S.winner.gameObject.GetComponent<Points>().pointsForOtherSide);
+            GameManager.S.winner.gameObject.GetComponent<Points>().AddPointsForOtherSide();
+
             winnerDetermined = true;
         }
 
