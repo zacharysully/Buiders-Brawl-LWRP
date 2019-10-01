@@ -104,11 +104,11 @@ public class PlayerController : MonoBehaviour
     
 
     [Header("Grounding")]
-    //[SerializeField]
+    [SerializeField]
     private float groundCheckDistance = 1.1f;
-    //[SerializeField]
+    [SerializeField]
     private float groundCheckSize = .3f;
-    //[SerializeField]
+    [SerializeField]
     private bool playerGrounded;
 
     public bool PlayerGrounded
@@ -676,6 +676,7 @@ public class PlayerController : MonoBehaviour
 
         //apply momentum
         moveVector += playerMovement.PlayerMomentum;
+        
         //-------------------------
 
         
@@ -743,7 +744,7 @@ public class PlayerController : MonoBehaviour
             moveVector.y = 0;
         }
 
-        
+        //CollisionCheck(moveVector);
 
         //Mathf.Clamp(moveVector.x, 0, 0);
         //Mathf.Clamp(moveVector.z, 0, 0);
@@ -777,6 +778,9 @@ public class PlayerController : MonoBehaviour
         ///Debug.DrawRay(this.gameObject.transform.position + new Vector3(-this.gameObject.transform.localScale.x * groundCheckSize, 0, 0), Vector3.down, Color.red, groundCheckDistance);
         //Debug.DrawRay(this.gameObject.transform.position + new Vector3(0, 0, this.gameObject.transform.localScale.z * groundCheckSize), Vector3.down, Color.red, groundCheckDistance);
         //Debug.DrawRay(this.gameObject.transform.position + new Vector3(0, 0, -this.gameObject.transform.localScale.z * groundCheckSize), Vector3.down, Color.red, groundCheckDistance);
+
+        Debug.DrawRay(this.gameObject.transform.position + new Vector3(this.gameObject.transform.localScale.x * groundCheckSize, 0, 0), Vector3.down * 3);
+        Debug.DrawRay(this.gameObject.transform.position + new Vector3(-this.gameObject.transform.localScale.x * groundCheckSize, 0, 0), Vector3.down * 3);
 
         if (Physics.Raycast(this.gameObject.transform.position, Vector3.down, out groundInfo, groundCheckDistance) 
             //|| Physics.Raycast(this.gameObject.transform.position + new Vector3(this.gameObject.transform.localScale.x * groundCheckSize, 0, this.gameObject.transform.localScale.z * groundCheckSize), Vector3.down, out groundInfo, groundCheckDistance) 
@@ -888,8 +892,9 @@ public class PlayerController : MonoBehaviour
         //raycast in direction moving
         RaycastHit hitInfo;
         Vector3 reflection = Vector3.zero;
-
+        collisonCheckLength = .5f;
         //TODO: add more raycasts to this
+        Debug.Log("collisionchecklength = " + collisonCheckLength);
         if (Physics.Raycast(this.gameObject.transform.position, directionMoving, out hitInfo, collisonCheckLength))
         {
             print("hit");
