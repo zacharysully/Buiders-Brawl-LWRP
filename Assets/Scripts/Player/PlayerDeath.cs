@@ -159,7 +159,6 @@ public class PlayerDeath : MonoBehaviour
         //reset animator
         playerController.playerAnimation.playerAnimator.Rebind();
 
-
     }
 
     IEnumerator WaitForRenderer()
