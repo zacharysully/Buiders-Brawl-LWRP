@@ -23,6 +23,8 @@ public class PlankPile : MonoBehaviour
     private void Start()
     {
         _usedPlanks.Value = 0;
+
+        _amountOfBoardsAllowed.Value = GameManager.S.playerList.Count - 1;
     }
 
     [SerializeField]

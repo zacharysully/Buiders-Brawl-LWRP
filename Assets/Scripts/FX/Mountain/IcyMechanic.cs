@@ -19,6 +19,14 @@ public class IcyMechanic : MonoBehaviour
             //Instantiate(iceCubePrefab, deathPos, Quaternion.identity);
             InstantiateIceCube(other.gameObject, deathPos);
         }
+        else if (other.gameObject.GetComponent<PlankManager>() != null)
+        {
+            other.gameObject.GetComponent<PlankManager>().CurrentBoardsOut.Value--;
+            //get rid of plank for Gamemananeger list
+            GameManager.S.planksInScene.Remove(other.gameObject.GetComponent<PlankManager>());
+            //destroys boards that go below map
+            Destroy(other.gameObject);
+        }
     }
 
     private void InstantiateIceCube(GameObject player, Vector3 deathPos)

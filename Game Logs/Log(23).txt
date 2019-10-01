@@ -1,0 +1,6 @@
+Level Name: SnowyMountain_V2
+Game Time: 05:44
+Number of Small Boards Placed: 7
+Number of Medium Boards Placed: 12
+Number of Large Boards Placed: 5
+

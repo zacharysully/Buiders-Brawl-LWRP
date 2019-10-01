@@ -1,0 +1,6 @@
+Level Name: Windy_Mesa
+Game Time: 06:31
+Number of Small Boards Placed: 3
+Number of Medium Boards Placed: 1
+Number of Large Boards Placed: 5
+
