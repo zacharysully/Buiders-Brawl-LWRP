@@ -5,7 +5,7 @@ using UnityEngine;
 public class LightningEffect : MonoBehaviour
 {
     [SerializeField]
-    private float timeUntilKill = 20f;
+    private float timeUntilKill = 5f;
     [SerializeField]
     private GameObject fireEffect;
     private float collisionCooldown = 1f;

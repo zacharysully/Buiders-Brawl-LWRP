@@ -4822,6 +4822,7 @@ GameObject:
   - component: {fileID: 545946384935901356}
   - component: {fileID: 545946384935901331}
   - component: {fileID: 545946384935901330}
+  - component: {fileID: 6317315354130717482}
   m_Layer: 0
   m_Name: Sub lightning (1)
   m_TagString: Untagged
@@ -9784,6 +9785,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6317315354130717482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545946384935901329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418e55d43d32df14a959cf8c0c2fcf33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &545946385287463294
 GameObject:
   m_ObjectHideFlags: 0
@@ -24556,8 +24569,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d92ef32394b5f474385d74b565a7bdd7, type: 2}
-  - {fileID: 2100000, guid: d92ef32394b5f474385d74b565a7bdd7, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
