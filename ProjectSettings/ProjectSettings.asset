@@ -624,7 +624,7 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Build: 0
-    Collab: 1
+    Collab: 0
     ErrorHub: 0
     Hub: 0
     UNet: 1
@@ -647,10 +647,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: bcda326d-14d1-4e23-a17b-cded955c6097
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: Buiders Brawl
-  organizationId: sboydstun
+  projectName: Builders Brawl
+  organizationId: null
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

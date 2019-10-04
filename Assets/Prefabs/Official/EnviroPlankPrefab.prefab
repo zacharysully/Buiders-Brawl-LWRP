@@ -179,9 +179,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7761090531474180682}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.6479, y: 1.751, z: 0}
-  m_LocalScale: {x: 1.4880633, y: 0.15648799, z: 0.6898346}
+  m_LocalScale: {x: 2.5087516, y: 0.15648799, z: 0.6898346}
   m_Children:
   - {fileID: 6847474690571200435}
   - {fileID: 5716068248423039450}
@@ -294,3 +294,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plankState: 3
+  _currentBoardsOut: {fileID: 0}
+  plankSize: {fileID: 0}
+  _startTime: 0
