@@ -27,20 +27,6 @@ public class PlankPile : MonoBehaviour
         _amountOfBoardsAllowed.Value = GameManager.S.playerList.Count - 1;
     }
 
-    private void Update()
-    {
-        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
-        {
-            GetComponent<MeshRenderer>().enabled = false;
-            GetComponent<BoxCollider>().enabled = false;
-        }
-        else
-        {
-            GetComponent<MeshRenderer>().enabled = true;
-            GetComponent<BoxCollider>().enabled = true;
-        }
-    }
-
     //[SerializeField]
     //private PlankArrayData plankArray;
     private float previousPercentage = 0;
