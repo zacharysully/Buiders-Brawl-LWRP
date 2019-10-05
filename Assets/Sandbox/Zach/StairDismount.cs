@@ -4,7 +4,10 @@ using System.Collections;
 public class StairDismount : MonoBehaviour {
 	//Declare a member variables for distributing the impacts over several frames
 	float impactEndTime=0;
+    [SerializeField]
 	Rigidbody impactTarget=null;
+    [SerializeField]
+    bool _fallFront;
     Rigidbody[] rigidBodies;
 
     Vector3 impact;
@@ -36,12 +39,20 @@ public class StairDismount : MonoBehaviour {
             helper.ragdolled = true;
 
             //set the impact target to whatever the ray hit
-            impactTarget = rigidBodies[0];
+            //impactTarget = rigidBodies[0];
 
             //the impact will be reapplied for the next 250ms
             //to make the connected objects follow even though the simulated body joints
             //might stretch
-            impactTarget.AddForce(-transform.forward * 0.5f, ForceMode.Force);
+            if (_fallFront)
+            {
+                impactTarget.AddForce((Vector3.down * 3f) + (transform.forward * 10), ForceMode.VelocityChange);
+            }
+            else
+            {
+                impactTarget.AddForce((Vector3.down * 3f) + (-transform.forward * 10), ForceMode.VelocityChange);
+            }
+            
         }
 		
 		//Pressing space makes the character get up, assuming that the character root has
