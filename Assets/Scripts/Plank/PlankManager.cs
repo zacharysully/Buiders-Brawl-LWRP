@@ -41,9 +41,13 @@ public class PlankManager : MonoBehaviour
 
     private bool earlyPlank = true;
 
-    float _despawnTimer = 20;
+    float _despawnSeconds = 120;
     [SerializeField]
     float _startTime;
+    [SerializeField]
+    float _currentDespawnTime;
+
+    public FloatVariable CurrentBoardsOut { get => _currentBoardsOut; set => _currentBoardsOut = value; }
 
     //------------------------------------------------------------------------------------------------------
 
@@ -57,25 +61,25 @@ public class PlankManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (plankState == PlankState.dropped)
+        {
+            _currentDespawnTime = Time.time - _startTime;
+
+            if (_currentDespawnTime >= _despawnSeconds)
+            {
+                _currentBoardsOut.Value--;
+                Destroy(gameObject);
+            }
+        }
+    }
+
     //determines whether plank is made by player or placed at beginning of level
     IEnumerator IsEarlyPlank()
     {
         yield return new WaitForSeconds(1f);
         earlyPlank = false;
-    }
-
-    IEnumerator DespawnTimer()
-    {
-        yield return new WaitForSeconds(_despawnTimer);
-
-        float _currentTime = Time.time - _startTime;
-
-        Debug.Log(_currentTime);
-        if(_currentTime >= _despawnTimer - 1)
-        {
-            _currentBoardsOut.Value--;
-            Destroy(gameObject);
-        }
     }
 
     public void PickUpSpawn()
@@ -271,8 +275,6 @@ public class PlankManager : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody>().isKinematic = false;
 
         SetToHitPlayers();
-
-        StartCoroutine(DespawnTimer());
         //StartCoroutine(DropDelaySetToHitPlayers());
 
         /*
@@ -282,6 +284,8 @@ public class PlankManager : MonoBehaviour
             this.gameObject.AddComponent<Rigidbody>();
         }
         */
+
+        _startTime = Time.time;
 
         plankState = PlankState.dropped;
     }

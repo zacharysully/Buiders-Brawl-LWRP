@@ -295,7 +295,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   plankState: 0
+  _currentBoardsOut: {fileID: 11400000, guid: ba963e75cd1c9a5439572520015057d7, type: 2}
   plankSize: {fileID: 11400000, guid: c5da4e09927e21b429858d55f910db38, type: 2}
+  _startTime: 0
 --- !u!1001 &2683242136319072379
 PrefabInstance:
   m_ObjectHideFlags: 0

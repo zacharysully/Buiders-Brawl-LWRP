@@ -120,15 +120,25 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        List<PlayerController> playersToRemove = new List<PlayerController>();
+
         //clean list
         for (int index = 0; index < playerList.Count; index++)
         {
             if(!playerList[index].gameObject.activeSelf)
             {
                 //print(playerList[index] + " not active.");
-                playerList.RemoveAt(index);
+                playersToRemove.Add(playerList[index]);
             }
         }
+
+        for (int i = 0; i < playersToRemove.Count; i++)
+        {
+            playerList.Remove(playersToRemove[i]);
+        }
+
+        //makes it elegable for garbage collection, we're done with it
+        playersToRemove = null;
 
     }
     /*public void RestartGame()

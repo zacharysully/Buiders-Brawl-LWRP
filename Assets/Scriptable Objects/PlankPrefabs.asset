@@ -18,5 +18,5 @@ MonoBehaviour:
   - {fileID: 2320350414238029631, guid: ae9c5d6cead562b4c8a52000b9e7f26c, type: 3}
   percentages:
   - 30
-  - 50
-  - 20
+  - 40
+  - 30

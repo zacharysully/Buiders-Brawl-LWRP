@@ -23,6 +23,8 @@ public class PlankPile : MonoBehaviour
     private void Start()
     {
         _usedPlanks.Value = 0;
+
+        _amountOfBoardsAllowed.Value = GameManager.S.playerList.Count - 1;
     }
 
     private void Update()
@@ -43,6 +45,20 @@ public class PlankPile : MonoBehaviour
     //private PlankArrayData plankArray;
     private float previousPercentage = 0;
     private float randomNum;
+
+    private void Update()
+    {
+        if (_usedPlanks.Value >= _amountOfBoardsAllowed.Value)
+        {
+            GetComponent<MeshRenderer>().enabled = false;
+            GetComponent<BoxCollider>().enabled = false;
+        }
+        else
+        {
+            GetComponent<MeshRenderer>().enabled = true;
+            GetComponent<BoxCollider>().enabled = true;
+        }
+    }
 
     public GameObject GeneratePlank(Vector3 newPlankSpawnPosition, Quaternion newPlankSpawnRotation)
     {
